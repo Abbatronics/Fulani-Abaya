@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fulani · Abaya Collection · Luxury</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f7f2ec;
+      font-family: 'Inter', sans-serif;
+      color: #1e1a16;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .brand-wrapper {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 3rem 2rem;
+      background: #f7f2ec;
+      position: relative;
+    }
+
+    /* ========== NAVIGATION ========== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 1.5rem 0 1.2rem;
+      border-bottom: 1px solid rgba(150, 125, 105, 0.2);
+      margin-bottom: 1.8rem;
+      gap: 1rem;
+    }
+
+    .nav-brand {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+      font-size: 2.2rem;
+      letter-spacing: 5px;
+      color: #1e1a16;
+      text-transform: uppercase;
+      background: linear-gradient(145deg, #1e1a16, #3d3229);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-brand span {
+      font-weight: 300;
+      letter-spacing: 8px;
+      font-size: 0.9rem;
+      -webkit-text-fill-color: #9a8474;
+      background: none;
+      color: #9a8474;
+      margin-left: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .nav-links a {
+      color: #3d322b;
+      text-decoration: none;
+      transition: 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #1e1a16;
+      transition: 0.3s;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .nav-links a:hover {
+      color: #1e1a16;
+    }
+    .nav-links .nav-cta {
+      background: #1e1a16;
+      color: #f7f2ec;
+      padding: 0.4rem 1.6rem;
+      border-radius: 60px;
+      transition: 0.25s;
+      font-weight: 500;
+    }
+    .nav-links .nav-cta::after {
+      display: none;
+    }
+    .nav-links .nav-cta:hover {
+      background: #3d3229;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(30, 26, 22, 0.1);
+      color: #f7f2ec;
+    }
+
+    .nav-contact {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      background: #e8ded5;
+      padding: 0.4rem 1.6rem;
+      border-radius: 60px;
+      border: 1px solid #d0c0b2;
+      color: #2d241e;
+      transition: 0.2s;
+      position: fixed;
+      top: 70px;
+      right: 45px;
+      z-index: 1000;
+    }
+    .nav-contact i { color: #7a6453; }
+    .nav-contact:hover {
+      background: #dccfc3;
+      border-color: #b8a494;
+    }
+
+    /* mobile nav toggle */
+    .nav-toggle {
+      display: none;
+      font-size: 1.6rem;
+      color: #1e1a16;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* ========== HERO CAROUSEL ========== */
+    .hero-carousel-wrapper {
+      margin: 0 -3rem 3.5rem -3rem;
+      padding: 0 3rem;
+      background: #f7f2ec;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      border-radius: 40px 20px 40px 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 50px -20px rgba(30, 25, 22, 0.1);
+      border: 1px solid #d4c5b8;
+      background: #e5d9cf;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      min-height: 480px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .carousel-slide::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(30, 26, 22, 0.3) 0%, rgba(30, 26, 22, 0.1) 100%);
+      z-index: 1;
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 3.5rem 4rem;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .slide-text {
+      flex: 1 1 340px;
+      background: rgba(247, 242, 236, 0.78);
+      backdrop-filter: blur(8px);
+      padding: 2.2rem 2.8rem;
+      border-radius: 30px 10px 30px 10px;
+      border: 1px solid rgba(255, 250, 245, 0.3);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08);
+    }
+    .slide-text h2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 3.8rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: #1e1a16;
+      letter-spacing: -0.5px;
+    }
+    .slide-text h2 i { font-style: italic; color: #7a6453; }
+    .slide-text .slide-sub {
+      font-size: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #4d3b30;
+      border-left: 4px solid #b8a494;
+      padding-left: 1.2rem;
+      margin: 0.8rem 0 1.2rem;
+    }
+    .slide-text p {
+      font-weight: 300;
+      color: #3d322b;
+      max-width: 400px;
+      line-height: 1.8;
+    }
+    .slide-text .slide-tag {
+      display: inline-block;
+      background: #dccfc3;
+      padding: 0.3rem 1.6rem;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 0.8rem;
+      color: #2d241e;
+    }
+
+    .slide-visual {
+      flex: 0 0 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(247, 242, 236, 0.6);
+      backdrop-filter: blur(6px);
+      padding: 1.8rem 1.2rem;
+      border-radius: 60px 20px 60px 20px;
+      border: 1px solid rgba(255, 250, 245, 0.2);
+    }
+    .slide-visual img {
+      width: 140px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 30px 10px 30px 10px;
+      box-shadow: 0 16px 30px -8px rgba(0,0,0,0.15);
+      border: 2px solid rgba(255, 250, 245, 0.5);
+    }
+    .slide-visual .label {
+      margin-top: 0.8rem;
+      font-family: 'EB Garamond', serif;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: #3d322b;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 250, 245, 0.8);
+      backdrop-filter: blur(6px);
+      border: 1px solid #d4c5b8;
+      border-radius: 60px;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #1e1a16;
+      cursor: pointer;
+      transition: 0.25s ease;
+      z-index: 10;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+    .carousel-btn:hover {
+      background: #fcf9f6;
+      border-color: #b8a494;
+      box-shadow: 0 10px 28px rgba(40,30,25,0.08);
+    }
+    .carousel-btn.prev { left: 20px; }
+    .carousel-btn.next { right: 20px; }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 14px;
+      z-index: 10;
+    }
+    .carousel-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 20px;
+      background: #c7b4a4;
+      cursor: pointer;
+      transition: 0.3s;
+      border: 1px solid #b8a494;
+    }
+    .carousel-dots span.active {
+      background: #1e1a16;
+      width: 32px;
+      border-color: #1e1a16;
+    }
+
+    /* ========== CTA ========== */
+    .cta-section {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0 2.5rem;
+    }
+    .btn-view-collection {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      background: #1e1a16;
+      color: #f7f2ec;
+      padding: 1rem 3.5rem;
+      border-radius: 60px;
+      border: none;
+      box-shadow: 0 12px 28px -8px rgba(30, 26, 22, 0.2);
+      transition: 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+    }
+    .btn-view-collection i {
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    .btn-view-collection:hover {
+      background: #3d3229;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 36px -10px rgba(30, 26, 22, 0.3);
+    }
+    .btn-view-collection:hover i {
+      transform: translateX(6px);
+    }
+
+    /* ========== ABOUT US ========== */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+      margin: 3.5rem 0 4rem;
+      padding: 2.5rem 3rem;
+      background: #fcf9f6;
+      border-radius: 60px 20px 60px 20px;
+      border: 1px solid #e7dbd0;
+      box-shadow: 0 10px 30px -12px rgba(0,0,0,0.02);
+    }
+    .about-image {
+      flex: 1 1 280px;
+      border-radius: 40px 10px 40px 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.06);
+    }
+    .about-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    .about-text {
+      flex: 2 1 380px;
+    }
+    .about-text h3 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #1e1a16;
+      margin-bottom: 0.6rem;
+    }
+    .about-text h3 i {
+      color: #7a6453;
+      margin-right: 12px;
+    }
+    .about-text .about-sub {
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #7a6453;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      font-weight: 300;
+      color: #3d322b;
+      line-height: 1.8;
+      max-width: 560px;
+    }
+    .about-text .about-values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      margin-top: 1.2rem;
+    }
+    .about-text .about-values span {
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: #3d322b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .about-text .about-values i {
+      color: #7a6453;
+    }
+
+    /* ========== CUSTOM TAILORING ========== */
+    .custom-tailor-section {
+      background: #f0e8e0;
+      border-radius: 60px 20px 60px 20px;
+      padding: 3.5rem 4rem;
+      margin: 3rem 0 4rem;
+      border: 1px solid #d4c5b8;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      box-shadow: 0 10px 30px -12px rgba(0,0,0,0.04);
+      transition: 0.2s;
+    }
+    .custom-tailor-section:hover {
+      border-color: #b8a494;
+      background: #eee4db;
+    }
+    .tailor-text {
+      flex: 2 1 320px;
+    }
+    .tailor-text h3 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #1e1a16;
+      margin-bottom: 0.4rem;
+    }
+    .tailor-text h3 i {
+      color: #7a6453;
+      margin-right: 12px;
+    }
+    .tailor-text p {
+      font-weight: 300;
+      color: #4d3b30;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+    .tailor-text .tailor-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      margin-top: 1rem;
+    }
+    .tailor-text .tailor-features span {
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: #3d322b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tailor-text .tailor-features i {
+      color: #7a6453;
+      font-size: 0.9rem;
+    }
+    .tailor-cta {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-tailor {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: transparent;
+      color: #1e1a16;
+      padding: 0.8rem 2.8rem;
+      border-radius: 60px;
+      border: 2px solid #1e1a16;
+      transition: 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .btn-tailor i {
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    .btn-tailor:hover {
+      background: #1e1a16;
+      color: #f7f2ec;
+      border-color: #1e1a16;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -10px rgba(30, 26, 22, 0.15);
+    }
+    .btn-tailor:hover i {
+      transform: translateX(4px);
+    }
+    .tailor-note {
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      color: #7a6453;
+      text-transform: uppercase;
+    }
+
+    /* ========== CUSTOMER TESTIMONIALS ========== */
+    .testimonials-section {
+      margin: 4rem 0 3rem;
+    }
+    .testimonials-section .section-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #1e1a16;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #d4c5b8;
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .testimonials-section .section-title small {
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #7a6453;
+      text-transform: uppercase;
+      margin-left: auto;
+      background: #e8ded5;
+      padding: 0.3rem 1.4rem;
+      border-radius: 40px;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .testimonial-card {
+      background: #fcf9f6;
+      padding: 2rem 1.8rem;
+      border-radius: 40px 12px 40px 12px;
+      border: 1px solid #e7dbd0;
+      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+    }
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      border-color: #c7b4a4;
+      box-shadow: 0 20px 30px -12px rgba(60, 45, 35, 0.06);
+    }
+    .testimonial-card .stars {
+      color: #b8a494;
+      font-size: 1rem;
+      letter-spacing: 4px;
+      margin-bottom: 0.8rem;
+    }
+    .testimonial-card blockquote {
+      font-style: italic;
+      font-weight: 300;
+      color: #3d322b;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .testimonial-card .customer {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 1.2rem;
+      border-top: 1px solid #eee5dc;
+      padding-top: 1rem;
+    }
+    .testimonial-card .customer img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #d4c5b8;
+    }
+    .testimonial-card .customer .name {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #1e1a16;
+    }
+    .testimonial-card .customer .location {
+      font-size: 0.7rem;
+      color: #7a6453;
+      letter-spacing: 1px;
+    }
+
+    /* ========== STYLE CARDS ========== */
+    .section-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #1e1a16;
+      margin: 0 0 2.5rem 0;
+      border-bottom: 1px solid #d4c5b8;
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .section-title small {
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #7a6453;
+      text-transform: uppercase;
+      margin-left: auto;
+      background: #e8ded5;
+      padding: 0.3rem 1.4rem;
+      border-radius: 40px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.2rem;
+      margin: 2.5rem 0 4rem;
+    }
+
+    .style-card {
+      background: #fcf9f6;
+      border-radius: 40px 12px 40px 12px;
+      padding: 0 0 2rem 0;
+      border: 1px solid #e7dbd0;
+      transition: 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+      text-align: center;
+      overflow: hidden;
+    }
+    .style-card:hover {
+      transform: translateY(-10px);
+      border-color: #c7b4a4;
+      box-shadow: 0 30px 40px -16px rgba(60, 45, 35, 0.08);
+      background: #ffffff;
+    }
+    .style-card .card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid #e7dbd0;
+    }
+    .style-card .card-body {
+      padding: 1.8rem 1.5rem 1.2rem;
+    }
+    .style-card .pill-feature {
+      display: inline-block;
+      background: #e8ded5;
+      font-size: 0.6rem;
+      padding: 0.2rem 1.2rem;
+      border-radius: 40px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #3d322b;
+      margin-bottom: 0.6rem;
+    }
+    .style-card h3 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 500;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      color: #1e1a16;
+    }
+    .style-card .sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #7a6453;
+      margin: 0.2rem 0 0.6rem;
+    }
+    .style-card p {
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #4d3b30;
+      line-height: 1.6;
+    }
+    .style-card .price-tag {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #3d322b;
+      margin-top: 1.2rem;
+      border-top: 1px dashed #d4c5b8;
+      padding-top: 1rem;
+    }
+
+    /* ========== GLOBAL ROW ========== */
+    .global-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: #efe6dd;
+      padding: 2rem 3rem;
+      border-radius: 120px 20px 120px 20px;
+      margin: 2.5rem 0 2rem;
+      border: 1px solid #d4c5b8;
+      transition: 0.2s;
+    }
+    .global-row:hover { background: #ece0d6; border-color: #c7b4a4; }
+    .global-row .delivery {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #1e1a16;
+    }
+    .global-row .delivery i { margin-right: 14px; color: #7a6453; }
+    .global-row .name-footer {
+      font-family: 'EB Garamond', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 6px;
+      color: #1e1a16;
+    }
+    .global-row .name-footer span {
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 4px;
+      color: #7a6453;
+      margin-left: 12px;
+    }
+    .global-row .contact-small {
+      font-size: 0.9rem;
+      background: #dccfc3;
+      padding: 0.5rem 1.8rem;
+      border-radius: 60px;
+      color: #1e1a16;
+      border: 1px solid #c7b4a4;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .global-row .contact-small:hover { background: #d1c2b4; }
+
+    /* ========== FOOTER (ENHANCED) ========== */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid #ddd0c4;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      padding-bottom: 2rem;
+    }
+
+    .footer-brand h4 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 4px;
+      color: #1e1a16;
+      margin-bottom: 0.4rem;
+    }
+    .footer-brand h4 span {
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 6px;
+      color: #9a8474;
+    }
+    .footer-brand p {
+      font-weight: 300;
+      color: #5a4a3d;
+      max-width: 280px;
+      line-height: 1.7;
+      font-size: 0.9rem;
+    }
+    .footer-brand .social-links {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .footer-brand .social-links a {
+      color: #5a4a3d;
+      font-size: 1.2rem;
+      transition: 0.2s;
+    }
+    .footer-brand .social-links a:hover {
+      color: #1e1a16;
+      transform: translateY(-2px);
+    }
+
+    .footer-col h5 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #1e1a16;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+    }
+    .footer-col ul a {
+      color: #5a4a3d;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 300;
+      transition: 0.2s;
+    }
+    .footer-col ul a:hover {
+      color: #1e1a16;
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e7dbd0;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: #7a6453;
+    }
+    .footer-bottom .right {
+      display: flex;
+      gap: 2rem;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .brand-wrapper { padding: 0 1.8rem 1.8rem; }
+      .hero-carousel-wrapper { margin: 0 -1.8rem 3rem -1.8rem; padding: 0 1.8rem; }
+      .carousel-slide { min-height: 400px; }
+      .slide-content { padding: 2.5rem 2rem; flex-direction: column; align-items: center; text-align: center; }
+      .slide-text { flex: 1 1 100%; padding: 1.8rem; }
+      .slide-text h2 { font-size: 2.8rem; }
+      .slide-text .slide-sub { border-left: 0; padding-left: 0; }
+      .slide-visual { flex: 0 0 auto; }
+      .card-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .about-section { padding: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #f7f2ec;
+        padding: 1.5rem 0;
+        border-top: 1px solid #e7dbd0;
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .nav-contact {
+        display: none;
+      }
+      .navbar {
+        padding: 1rem 0;
+      }
+
+      .brand-wrapper { padding: 0 1.2rem 1.2rem; }
+      .hero-carousel-wrapper { margin: 0 -1.2rem 2.5rem -1.2rem; padding: 0 1.2rem; }
+      .carousel-slide { min-height: 320px; }
+      .slide-content { padding: 1.2rem; }
+      .slide-text h2 { font-size: 2rem; }
+      .slide-text { padding: 1rem; }
+      .slide-visual img { width: 90px; height: 120px; }
+      .card-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .about-section { flex-direction: column; padding: 1.5rem; }
+      .about-image img { height: 220px; }
+      .custom-tailor-section { padding: 1.8rem; flex-direction: column; text-align: center; }
+      .tailor-text p { max-width: 100%; }
+      .tailor-text .tailor-features { justify-content: center; }
+      .global-row { flex-direction: column; align-items: flex-start; gap: 1.2rem; border-radius: 60px 12px 60px 12px; padding: 1.8rem; }
+      .carousel-btn { width: 36px; height: 36px; font-size: 0.9rem; }
+      .carousel-btn.prev { left: 6px; }
+      .carousel-btn.next { right: 6px; }
+      .btn-view-collection { font-size: 1rem; padding: 0.8rem 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="brand-wrapper">
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar">
+    <a href="#" class="nav-brand">FULANI <span>· abaya</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Collection</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Tailoring</a></li>
+      <li><a href="#" class="nav-cta">Contact</a></li>
+    </ul>
+
+    <div class="nav-contact">
+      <i class="fas fa-phone-alt"></i> 09037210456
+    </div>
+  </nav>
+
+  <!-- ========== HERO CAROUSEL ========== -->
+  <div class="hero-carousel-wrapper">
+    <div class="carousel-container" id="carouselContainer">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- slide 1 -->
+        <div class="carousel-slide" style="background-image: url('/Fulani.jpg'); object-fit: fill; background-position: center; height: 10%;">
+          <div class="slide-content">
+            <div class="slide-text">
+              <h2>Elegance <i>in</i> Every Thread</h2>
+              <div class="slide-sub">timeless · modest · premium</div>
+              <p>Discover timeless beauty with our premium abayas, designed for comfort, modesty, and style.</p>
+              <span class="slide-tag"><i class="fas fa-star" style="margin-right: 6px;"></i> signature</span>
+            </div>
+            <div class="slide-visual">
+              <img src="/Fulani.jpg" alt="Abaya" />
+              <span class="label">✦ abaya ✦</span>
+            </div>
+          </div>
+        </div>
+        <!-- slide 2 -->
+        <div class="carousel-slide" style="background-image: url('/Fulani2.jpg');">
+          <div class="slide-content">
+            <div class="slide-text">
+              <h2>Modest <i>·</i> Luxe</h2>
+              <div class="slide-sub">everyday elegance</div>
+              <p>From morning light to evening glow, our abayas bring quiet confidence. Premium fabrics, fluid silhouettes.</p>
+              <span class="slide-tag"><i class="fas fa-feather-alt" style="margin-right: 6px;"></i> new arrival</span>
+            </div>
+            <div class="slide-visual">
+              <img src="/Fulani2.jpg" alt="Modest" />
+              <span class="label">✦ comfort ✦</span>
+            </div>
+          </div>
+        </div>
+        <!-- slide 3 -->
+        <div class="carousel-slide" style="background-image: url('/Fulani3.jpg');">
+          <div class="slide-content">
+            <div class="slide-text">
+              <h2>Global <i>·</i> Heritage</h2>
+              <div class="slide-sub">worldwide delivery</div>
+              <p>Fulani abayas are crafted for the modern woman, wherever she is. Free worldwide delivery and premium quality.</p>
+              <span class="slide-tag"><i class="fas fa-globe-americas" style="margin-right: 6px;"></i> worldwide</span>
+            </div>
+            <div class="slide-visual">
+              <img src="/Fulani3.jpg" alt="Global" />
+              <span class="label">✦ premium ✦</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+      <button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+      <div class="carousel-dots" id="carouselDots">
+        <span class="active" data-index="0"></span>
+        <span data-index="1"></span>
+        <span data-index="2"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CTA ========== -->
+  <div class="cta-section">
+    <a href="#" class="btn-view-collection">
+      View Collection <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <!-- ========== ABOUT US ========== -->
+  <div class="about-section" id="about">
+    <div class="about-image">
+      <img src="/Fulani4.jpg" alt="Fulani craftsmanship" />
+    </div>
+    <div class="about-text">
+      <h3><i class="fas fa-leaf"></i> About Fulani</h3>
+      <div class="about-sub">heritage · craftsmanship · elegance</div>
+      <p>
+        Fulani Abaya Collection is born from a deep appreciation for timeless elegance and modest fashion.
+        Each piece is thoughtfully designed with premium fabrics, combining traditional craftsmanship with
+        contemporary silhouettes. We believe that every woman deserves to feel confident, comfortable, and beautiful.
+      </p>
+      <div class="about-values">
+        <span><i class="fas fa-check-circle"></i> Premium materials</span>
+        <span><i class="fas fa-check-circle"></i> Artisanal details</span>
+        <span><i class="fas fa-check-circle"></i> Ethical production</span>
+        <span><i class="fas fa-check-circle"></i> Designed in Nigeria</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CUSTOM TAILORING ========== -->
+  <div class="custom-tailor-section">
+    <div class="tailor-text">
+      <h3><i class="fas fa-cut"></i> Custom Tailoring</h3>
+      <p>Every woman is unique. Our expert tailors will craft your abaya to your exact measurements and preferences. Choose your fabric, silhouette, and details.</p>
+      <div class="tailor-features">
+        <span><i class="fas fa-check-circle"></i> Perfect fit</span>
+        <span><i class="fas fa-check-circle"></i> Premium fabrics</span>
+        <span><i class="fas fa-check-circle"></i> Embroidery options</span>
+        <span><i class="fas fa-check-circle"></i> 14-day delivery</span>
+      </div>
+    </div>
+    <div class="tailor-cta">
+      <a href="#" class="btn-tailor">
+        Inquire Now <i class="fas fa-arrow-right"></i>
+      </a>
+      <span class="tailor-note">Free consultation</span>
+    </div>
+  </div>
+
+  <!-- ========== OUR ABAYA STYLES ========== -->
+  <div class="section-title">
+    <span>Our Abaya Styles</span>
+    <small><i class="fas fa-star" style="color: #b8a494; margin-right: 6px;"></i> premium</small>
+  </div>
+
+  <div class="card-grid">
+    <div class="style-card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=400&fit=crop&crop=center" alt="Noor" />
+      <div class="card-body">
+        <div class="pill-feature">best seller</div>
+        <h3>Noor</h3>
+        <div class="sub">evening elegance</div>
+        <p>Fluid crepe, subtle draping, and delicate embroidery along the cuffs.</p>
+        <div class="price-tag">₦ 185,000</div>
+      </div>
+    </div>
+    <div class="style-card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=600&h=400&fit=crop&crop=center" alt="Laila" />
+      <div class="card-body">
+        <div class="pill-feature">everyday luxury</div>
+        <h3>Laila</h3>
+        <div class="sub">modern classic</div>
+        <p>Lightweight jersey, relaxed fit, with a modern split-neck design.</p>
+        <div class="price-tag">₦ 142,000</div>
+      </div>
+    </div>
+    <div class="style-card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=400&fit=crop&crop=center" alt="Zahara" />
+      <div class="card-body">
+        <div class="pill-feature">special occasion</div>
+        <h3>Zahara</h3>
+        <div class="sub">signature piece</div>
+        <p>Hand-beaded belt, premium satin-crepe, and a flowing cape silhouette.</p>
+        <div class="price-tag">₦ 220,000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CUSTOMER TESTIMONIALS ========== -->
+  <div class="testimonials-section">
+    <div class="section-title">
+      <span>What Our Clients Say</span>
+      <small><i class="fas fa-heart" style="color: #b8a494; margin-right: 6px;"></i> 5-star reviews</small>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <blockquote>"Absolutely stunning! The quality is exceptional and the fit was perfect. I've never felt more elegant."</blockquote>
+        <div class="customer">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=center" alt="Amina" />
+          <div>
+            <div class="name">Amina B.</div>
+            <div class="location">Lagos, Nigeria</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <blockquote>"The custom tailoring service is incredible. They made sure every detail was exactly as I wanted. Highly recommend!"</blockquote>
+        <div class="customer">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=center" alt="Fatima" />
+          <div>
+            <div class="name">Fatima K.</div>
+            <div class="location">Dubai, UAE</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <blockquote>"I wore my Fulani abaya to a wedding and received so many compliments. The fabric drapes beautifully."</blockquote>
+        <div class="customer">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=center" alt="Zainab" />
+          <div>
+            <div class="name">Zainab M.</div>
+            <div class="location">London, UK</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== GLOBAL ROW ========== -->
+  <div class="global-row">
+    <div class="delivery"><i class="fas fa-globe-americas"></i> Worldwide Delivery</div>
+    <div class="name-footer">FULANI <span>· abaya</span></div>
+    <div class="contact-small"><i class="fas fa-phone-alt"></i> 09037210456</div>
+  </div>
+
+  <!-- ========== ENHANCED FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>FULANI <span>· abaya</span></h4>
+        <p>Premium abayas designed for the modern woman. Elegance, modesty, and comfort in every thread.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Tailoring</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="#"><i class="fas fa-phone" style="margin-right: 8px;"></i> 09037210456</a></li>
+          <li><a href="#"><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@fulani.com</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Gadi-Gadi Kano State, Nigeria</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Fulani Abaya Collection. All rights reserved.</span>
+      <div class="right">
+        <span>Privacy Policy</span>
+        <span>Terms of Service</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ========== SCRIPTS ========== -->
+<script>
+  // Nav toggle
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Carousel
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const slides = track.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('#carouselDots span');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateCarousel(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentIndex = index;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function nextSlide() { updateCarousel(currentIndex + 1); }
+    function prevSlide() { updateCarousel(currentIndex - 1); }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', function() {
+        const index = parseInt(this.getAttribute('data-index'), 10);
+        updateCarousel(index);
+      });
+    });
+
+    let autoPlay = setInterval(nextSlide, 5000);
+    const container = document.getElementById('carouselContainer');
+    container.addEventListener('mouseenter', () => clearInterval(autoPlay));
+    container.addEventListener('mouseleave', () => { autoPlay = setInterval(nextSlide, 5000); });
+
+    updateCarousel(0);
+  })();
+</script>
+
+</body>
+</html>
