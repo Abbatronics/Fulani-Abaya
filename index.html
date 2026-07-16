@@ -652,7 +652,33 @@
       padding: 0.3rem 1.4rem;
       border-radius: 40px;
     }
-
+    /* ===== SECTION TITLES1 ===== */
+    .section-title1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #0d0a08;
+      margin: 0 0 2.5rem 0;
+      border-bottom: 1px solid #d4c5b8;
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .section-title1 small {
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #5a4a3d;
+      text-transform: uppercase;
+      margin-left: auto;
+      background: #e8ded5;
+      padding: 0.3rem 1.4rem;
+      border-radius: 40px;
+    }
     /* ===== PRODUCT CARDS ===== */
     .card-grid {
       display: grid;
@@ -662,7 +688,14 @@
       background-color: #dccfc3;
       padding: 50px;
     }
-
+     .card-grid1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.2rem;
+      margin: 2.5rem 0 4rem;
+      background-color: #9b8f84;
+      padding: 50px;
+    }
     .style-card {
       background: #fcf9f6;
       border-radius: 40px 12px 40px 12px;
@@ -1264,7 +1297,43 @@
       </div>
     </div>
   </div>
+  <div class="section-title1" id="collection">
+    <span>Best Selling Kimono</span>
+    <small><i class="fas fa-star" style="color: #b8a494; margin-right: 6px;"></i> premium</small>
+  </div>
 
+  <div class="card-grid1">
+    <div class="style-card">
+      <img class="card-img" src="kimono_cheap1.jpg" alt="Noor" />
+      <div class="card-body">
+        <div class="pill-feature">best seller</div>
+        <h3>Noor</h3>
+        <div class="sub">evening elegance</div>
+        <p>Fluid crepe, subtle draping, and delicate embroidery along the cuffs.</p>
+        <div class="price-tag">₦ 18,000<span class="discount-price">₦ 20,000</span></div>
+      </div>
+    </div>
+    <div class="style-card">
+      <img class="card-img" src="kimono_cheap2.jpg" alt="Laila" />
+      <div class="card-body">
+        <div class="pill-feature">everyday luxury</div>
+        <h3>Laila</h3>
+        <div class="sub">modern classic</div>
+        <p>Lightweight jersey, relaxed fit, with a modern split-neck design.</p>
+        <div class="price-tag">₦ 18,000<span class="discount-price">₦ 20,000</span></div>
+      </div>
+    </div>
+    <div class="style-card">
+      <img class="card-img" src="kimono_cheap3.jpg" alt="Zahara" />
+      <div class="card-body">
+        <div class="pill-feature">special occasion</div>
+        <h3>Zahara</h3>
+        <div class="sub">signature piece</div>
+        <p>Hand-beaded belt, premium satin-crepe, and a flowing cape silhouette.</p>
+        <div class="price-tag">₦ 18,000<span class="discount-price">₦ 20,000</span></div>
+      </div>
+    </div>
+  </div>
   <!-- ===== CUSTOMER TESTIMONIALS ===== -->
   <div class="testimonials-section">
     <div class="section-title">
